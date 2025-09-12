@@ -1,13 +1,21 @@
 import React from "react";
 
 function NavBar({ title, bgClr, textClr, icons, onIconClick }) {
+  const handleTitleClick = () => {
+    if (window.location.pathname === "/") {
+      window.location.reload();
+    } else {
+      window.location.href = "/";
+    }
+  };
+
   return (
     <nav className={`${bgClr} ${textClr} sticky`}>
       <div className="px-4 py-3 flex items-center justify-between max-w-[1440px] mx-auto">
         {/* Title */}
         <a
           className="text-2xl font-bold tracking-wide select-none cursor-pointer"
-          onClick={() => location.reload()}
+          onClick={handleTitleClick}
         >
           {title}
         </a>

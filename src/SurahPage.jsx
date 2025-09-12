@@ -388,7 +388,7 @@ const SurahPage = () => {
         )}
 
         {/* VERSES */}
-        <div className="border-t border-gray-700">
+        <div className="border-b border-gray-500">
           {loading ? (
             <p className="text-white text-center p-4">Loading verses...</p>
           ) : activeTab === "translation" ? (
